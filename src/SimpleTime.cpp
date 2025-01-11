@@ -133,7 +133,7 @@ void breakTime(time_t timeInput, stElements_t &st) {
   z /= 24;
   // From here, z is in days from 1970-01-01
   // weekday_from_days
-  st.Weekday = (uint32_t)(z >= -4 ? (z + 4) % 7 : (z + 5) % 7 + 6);
+  st.Weekday = (uint32_t)(z >= -4 ? (z + 4) % 7 : (z + 5) % 7 + 6) % 7;
 
   // civil_from_days
   z += 719468;
